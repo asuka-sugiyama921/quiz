@@ -1,0 +1,124 @@
+body{
+  background: #faf1ea;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+}
+
+h1,p{
+  width:450px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+h1{
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #7db4e6;/*左線*/
+}
+
+.under{
+  border-bottom: dotted 3px rgb(252, 68, 197);
+}
+
+.container{
+  width: 450px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+}
+
+#question{
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+#choices{
+  list-style: none;
+  /*liに元からついている黒丸を外す*/
+  padding: 0;
+  margin-bottom: 16px;
+  /*下のボタンとの間を開ける*/
+
+}
+
+#choices > li{/*choicesの直下のliを指定*/
+border: 1.5px solid #ccc;
+border-radius: 4px;
+padding: 10px;
+margin-bottom: 10px;
+cursor: pointer;
+
+}
+
+#choices > li:hover{
+  background: #f8f8f8;
+}
+
+#choices > li.correct{
+  background: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  font-weight: bold;
+}
+#choices > li.correct::after{
+  content: '...correct!';
+}
+
+#choices > li.wrong{
+  background: #f8d8da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  font-weight: bold;
+}
+
+#choices > li.wrong::after{
+  content: '...wrong';
+}
+
+#btn, #result > a{ /*btnとresult直下のaにも適用*/
+background: #f8cc39;
+padding: 8px;
+border-radius: 4px;
+cursor: pointer;
+text-align: center;
+color: #fff;
+box-shadow: 0 4px 0 #c9be2c;
+
+}
+
+#btn.disabled{
+  background: #ccc;
+  box-shadow: 0 4px 0 #bbb;
+  opacity: 0.7;
+}
+
+#result{
+  position: absolute;
+  width: 300px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.4s;/*アニメーション*/
+}
+
+#result.hidden{
+  transform: translateY(-500px);/*上方向にずらす*/
+}
+
+#result > p{
+  font-size: 24px;
+}
+
+#result > a{
+  display: block;
+  text-decoration: none;/*下線を消す*/
+}
+
