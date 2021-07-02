@@ -18,6 +18,7 @@ h1{
 
 .under{
   border-bottom: dotted 3px rgb(252, 68, 197);
+  line-height: 30px;
 }
 
 .container{
